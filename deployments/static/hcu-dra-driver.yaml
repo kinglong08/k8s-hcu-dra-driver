@@ -97,6 +97,9 @@ spec:
             # klog verbosity 1-5; use >=4 for Prepare/Unprepare V(4) debug logs
             - name: LOG_LEVEL
               value: "5"
+            # max vHCUs per physical HCU (capacity.slices)
+            - name: DEVICE_SPLIT_COUNT
+              value: "4"
           volumeMounts:
             - name: plugins-registry
               mountPath: /var/lib/kubelet/plugins_registry
